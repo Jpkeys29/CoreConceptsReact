@@ -20,10 +20,10 @@ function Header(){
   )
 }
 
-function CoreConcept({title,img,description}){
+function CoreConcept({image,title,description}){
   return(
     <li>
-      <img src={img} alt={title}/>
+      <img src={image} alt={title}/>
       <h3>{title}</h3>
       <p>{description}</p>
     </li>
@@ -40,21 +40,17 @@ function App() {
             <ul>
               <CoreConcept 
                 title={CORE_CONCEPTS[0].title} 
-                img={CORE_CONCEPTS[0].image} 
+                image={CORE_CONCEPTS[0].image} 
                 description={CORE_CONCEPTS[0].description} />
-              <CoreConcept 
-                title={CORE_CONCEPTS[1].title}
-                img={CORE_CONCEPTS[1].image} 
-                description={CORE_CONCEPTS[1].description}
-                />
+              <CoreConcept {...CORE_CONCEPTS[1]} />
               <CoreConcept 
                 title={CORE_CONCEPTS[2].title}
-                img={CORE_CONCEPTS[2].image} 
+                image={CORE_CONCEPTS[2].image} 
                 description={CORE_CONCEPTS[2].description}
                 />
               <CoreConcept
                 title={CORE_CONCEPTS[3].title}
-                img={CORE_CONCEPTS[3].image} 
+                image={CORE_CONCEPTS[3].image} 
                 description={CORE_CONCEPTS[3].description}
               />
             </ul>
